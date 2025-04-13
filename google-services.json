@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "910250395245",
+    "project_id": "militrain-41e31",
+    "storage_bucket": "militrain-41e31.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910250395245:android:caa602c6d740f6f7576164",
+        "android_client_info": {
+          "package_name": "com.militrain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxVxTt9hirBmeNhNx3eWjFkINLeJ9-mqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
