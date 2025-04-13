@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "910250395245",
-    "project_id": "militrain-41e31",
-    "storage_bucket": "militrain-41e31.firebasestorage.app"
+    "project_number": "769631941718",
+    "project_id": "service-militrain",
+    "storage_bucket": "service-militrain.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:910250395245:android:caa602c6d740f6f7576164",
+        "mobilesdk_app_id": "1:769631941718:android:feb9956d200be7f22cb7f7",
         "android_client_info": {
-          "package_name": "com.militrain"
+          "package_name": "com.MiliTrain"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "769631941718-rmvn8m3l6vjavhpqpbjo1f0bil5db6cb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyDxVxTt9hirBmeNhNx3eWjFkINLeJ9-mqU"
+          "current_key": "AIzaSyCfkwlA12GN2iJHj2FuAT90zfZM2dOoe4k"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769631941718-rmvn8m3l6vjavhpqpbjo1f0bil5db6cb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

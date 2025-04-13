@@ -1,8 +1,30 @@
 <script>
 
 	import { goto } from "$app/navigation";
+  import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
+  import { auth } from '../firebase';
+  import { collection, addDoc } from 'firebase/firestore';
+  import { db } from '../firebase';
+
+  async function googleLogin() {
+    const provider = new GoogleAuthProvider();
+    try {
+     const result = await signInWithPopup(auth, provider);
+     const user = result.user;
+     // 로그인 성공하면 users 컬렉션에 저장
+     await addDoc(collection(db, 'users'), {
+       uid: user.uid,
+       email: user.email,
+      });
+      //로그인 성공 후 페이지 이동
+      goto('/information');
+    } catch (error) {
+      console.error(error);
+   }
+  }
 
 </script>
+
 <!-- 로그인 페이지 메인 컨테이너 -->
 <div class="login-container">
   <h1>Welcome To</h1>
@@ -15,7 +37,7 @@
   <!-- 소셜 로그인 버튼 그룹 -->
   <div class="social-buttons">
     <!-- 각 소셜 로그인 버튼들 -->
-    <button class="google" on:click={() => goto('/information')}>
+    <button class="google" on:click={googleLogin}>
       <img src="src/images/google.png" alt="구글" />
       Google로 계속하기
     </button>
@@ -32,15 +54,7 @@
 </div>
 
 <style>
-  /*
-  :global(body){
-    background-image: url('../images/page.jpg');
-    background-size: 76%;
-    background-repeat: no-repeat;
-    background-position: 61px 47px;
-  }
-
-    /* 메인 컨테이너 레이아웃 설정 */
+  /* 메인 컨테이너 레이아웃 설정 */
   .login-container {
     display: flex;
     flex-direction: column;
