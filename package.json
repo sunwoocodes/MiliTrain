@@ -38,6 +38,7 @@
 		"vite": "^6.2.5"
 	},
 	"dependencies": {
-		"firebase": "^11.6.0"
+		"firebase": "^11.6.0",
+		"kakao-js-sdk": "^1.2.3"
 	}
 }
